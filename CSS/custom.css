@@ -1,0 +1,26 @@
+﻿/* Style the buttons */
+.btn_filter{
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white !important;
+    cursor: pointer;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.filterDiv {
+    display: none!important ; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: flex!important ;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
