@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <meta charset="utf-8" />
+    <script>"./client.js"</script>
     <title></title>
 </head>
 <body>
@@ -26,7 +27,41 @@
 
         <div class="form-group row">
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Reserve</button>
+                <button type="submit" class="btn btn-primary" onclick="counterUpdate()">Reserve</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <h5>Area Info</h5>
+                    <table class="table-striped">
+                        <tr>
+                            <th scope="col">Current Students</th>
+                            <th scope="col">
+                                <input name="counter" id="countername">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Max Students</th>
+                            <th scope="col">50</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Social Distancing Level</th>
+                            <th scope="col">Medium</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Noise Level</th>
+                            <th scope="col">Low</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Hours</th>
+                            <th scope="col">12:00am-12:00am</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Group Size</th>
+                            <th scope="col">1 to 10</th>
+                        </tr>
+                    </table>
             </div>
         </div>
 
