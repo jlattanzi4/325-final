@@ -8,12 +8,19 @@
     <title>Reserve Space</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
-    <link href="./album.css" rel="stylesheet">
+    <link href="./CSS/album.css" rel="stylesheet">
+    <link href="./CSS/custom.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./Scripts/custom.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
     <style>
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -38,172 +45,185 @@
     <img src="Images/umassamherst_logo.png"  class="cornerLogo">
   </div> 
   <main role="main">
-  <section class="jumbotron text-center">
-    
-    <div class="container">
-      <h1>UMass Amherst Room Reservations</h1>
-      <p class="lead text-muted">Use this page to navigate through available rooms and reseve rooms for yourself.</p>
-    </div>
-  </section>
+      <section class="jumbotron text-center">
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+          <div class="container">
+              <h1>UMass Amherst Room Reservations</h1>
+              <p class="lead text-muted">Use this page to navigate through available rooms and reseve rooms for yourself.</p>
+          </div>
+      </section>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="Images/learning_commons_banner.jpg" height="225" alt="learning_common" preserveAspectRatio="True">
-              <div class="card-body">
-                <h3 id="countername">Dubois Library Floor Learning Commons</h3>
-                <p class="card-text">Open workspace area where students can work together. Has computers, printers and study rooms available for use.</p>
-               
 
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a class="btn btn-primary" href="Forms/du_bois_form.html" role="button" onclick="createCounter()">Reserve</a>
-                  <a class="btn btn-primary" href="https://www.library.umass.edu/learningcommons/" role="button">View</a>
-                </div>
-                <small class="text-muted">9 mins</small>
+      <div class="album py-5 bg-light" style="padding-top:0em!important;">
+          <p style="margin:0px">Population Density: </p>
+          <!-- Control buttons -->
+          <div id="myBtnContainer">
+              <button class="btn_filter" autofocus="autofocus" onclick="filterSelection('all')"> Show all</button>
+              <button class="btn_filter" onclick="filterSelection('sparse')">Sparse</button>
+              <button class="btn_filter" onclick="filterSelection('medium')"> Medium</button>
+              <button class="btn_filter" onclick="filterSelection('capacity')"> Capacity</button>
+          </div>
+
+
+          <div class="container" style="padding-top:1em!important">
+
+              <div class="row">
+                  <div class="col-md-4 filterDiv capacity">
+                      <div class="card mb-4 shadow-sm">
+                          <img src="Images/learning_commons_banner.jpg" height="225" alt="learning_common" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3 id="countername">Dubois Library Floor Learning Commons</h3>
+                              <p class="card-text">Open workspace area where students can work together. Has computers, printers and study rooms available for use.</p>
+
+
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/du_bois_form.html" role="button" onclick="createCounter()">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.library.umass.edu/learningcommons/" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+             
+                  <div class="col-md-4 filterDiv capacity">
+                      <div class="card mb-4 shadow-sm">
+                          <img src="Images/ilc_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>ILC Floor 2</h3>
+                              <p class="card-text"><br>One of the newest facilities at UMass, popular sitting area with access to Pete's Cafe</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/ilc_fl2_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.umass.edu/cp/integrative-learning-center" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            
+                  <div class="col-md-4 filterDiv capacity">
+                      <div class="card mb-4 shadow-sm">
+                          <img src="Images/south_college_banner.jpg" height="225" alt="south_college" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>South College West </h3>
+                              <p class="card-text"><br>High Ceelings and Ample table space where students can work on their own in a cozy enviroment.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+
+                                      <a class="btn btn-primary" href="Forms/south_college_west_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.umass.edu/cp/south-college" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            
+                  <div class="col-md-4 filterDiv medium">
+                      <div class="card mb-4 shadow-sm">
+                          <img src="Images/isenberg_banner.png" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>Isenberg Room 32</h3>
+                              <p class="card-text"><br>Inside the Insenberg Building you'll find yourself in a Buisness like envirment a dedciated table to study on your own</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/isenberg_rm32_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.isenberg.umass.edu/construction" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 filterDiv medium">
+                      <div class="card mb-4 shadow-sm">
+                          <img src="Images/umass_fl18_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>Dubois Library Floor 18</h3>
+                              <p class="card-text"><br>If you like quiet places this is your spot, located on the top of the library you have a great view and a very silent enviroment</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/du_bois_fl18_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.library.umass.edu/du-bois-library/" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                          <img src="Images/roots_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>Roots Cafe</h3>
+                              <p class="card-text"><br>Great place to meet with your Team and grab a snack.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/roots_cafe_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://umassdining.com/locations-menus/around-campus/roots-cafe" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                          <img src="Images/lederle_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>Lederle Cafe</h3>
+                              <p class="card-text"><br>Leederle Caffe is good spot for a quick sessions while you grab a coffee in between your classes.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/lederle_cafe_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.umass.edu/wld/lederle-graduate-research-center-lgrc-lowrise" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                          <img src="Images/isb_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>ISB Cafe</h3>
+                              <p class="card-text"><br>Located in one of the premiere facilities at UMass you will find ample table space, and a Starbucks to quench your caffeine addiction.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/isb_cafe_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://www.cns.umass.edu/research/buildings-and-facilities/integrated-sciences-building" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                          <img src="Images/worcester_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
+                          <div class="card-body">
+                              <h3>Worcester Dining Common</h3>
+                              <p class="card-text">Newest spot on campus to eat and study.~</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="Forms/worcester_dining_common_form.html" role="button">Reserve</a>
+                                      <a class="btn btn-primary" href="https://umassdining.com/locations-menus/worcester" role="button">View</a>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="Images/south_college_banner.jpg" height="225" alt="south_college" preserveAspectRatio="True">
-                <div class="card-body">
-                    <h3>South College West </h3>
-                    <p class="card-text"><br>High Ceelings and Ample table space where students can work on their own in a cozy enviroment.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-
-                            <a class="btn btn-primary" href="Forms/south_college_west_form.html" role="button">Reserve</a>
-                            <a class="btn btn-primary" href="https://www.umass.edu/cp/south-college" role="button">View</a>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src="Images/ilc_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>ILC Floor 2</h3>
-                <p class="card-text"><br>One of the newest facilities at UMass, popular sitting area with access to Pete's Cafe</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/ilc_fl2_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://www.umass.edu/cp/integrative-learning-center" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src="Images/isenberg_banner.png" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>Isenberg Room 32</h3>
-                <p class="card-text"><br>Inside the Insenberg Building you'll find yourself in a Buisness like envirment a dedciated table to study on your own</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/isenberg_rm32_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://www.isenberg.umass.edu/construction" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src="Images/umass_fl18_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>Dubois Library Floor 18</h3>
-                <p class="card-text"><br>If you like quiet places this is your spot, located on the top of the library you have a great view and a very silent enviroment</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/du_bois_fl18_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://www.library.umass.edu/du-bois-library/" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="Images/roots_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-                <div class="card-body">
-                    <h3>Roots Cafe</h3>
-                    <p class="card-text"><br>Great place to meet with your Team and grab a snack.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a class="btn btn-primary" href="Forms/roots_cafe_form.html" role="button">Reserve</a>
-                            <a class="btn btn-primary" href="https://umassdining.com/locations-menus/around-campus/roots-cafe" role="button">View</a>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src="Images/lederle_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>Lederle Cafe</h3>
-                <p class="card-text"><br>Leederle Caffe is good spot for a quick sessions while you grab a coffee in between your classes.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/lederle_cafe_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://www.umass.edu/wld/lederle-graduate-research-center-lgrc-lowrise" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="Images/isb_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>ISB Cafe</h3>
-                <p class="card-text"><br>Located in one of the premiere facilities at UMass you will find ample table space, and a Starbucks to quench your caffeine addiction.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/isb_cafe_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://www.cns.umass.edu/research/buildings-and-facilities/integrated-sciences-building" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="Images/worcester_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
-            <div class="card-body">
-                <h3>Worcester Dining Common</h3>
-                <p class="card-text">Newest spot on campus to eat and study.~</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Forms/worcester_dining_common_form.html" role="button">Reserve</a>
-                        <a class="btn btn-primary" href="https://umassdining.com/locations-menus/worcester" role="button">View</a>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
 
-</main>
+  </main>
 
 <footer class="text-muted">
   <div class="container">
