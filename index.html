@@ -59,16 +59,18 @@
           <!-- Control buttons -->
           <div id="myBtnContainer">
               <button class="btn_filter" autofocus="autofocus" onclick="filterSelection('all')"> Show all</button>
-              <button class="btn_filter" onclick="filterSelection('sparse')">Sparse</button>
-              <button class="btn_filter" onclick="filterSelection('medium')"> Medium</button>
+              <button class="btn_filter" onclick="filterSelection('low')">Low Noise</button>
+              <button class="btn_filter" onclick="filterSelection('distanced')"> Socially Distanced</button>
               <button class="btn_filter" onclick="filterSelection('capacity')"> Capacity</button>
+              <button class="btn_filter" onclick="filterSelection('late')"> Open Late</button>
+              <button class="btn_filter" onclick="filterSelection('social')"> Social</button>
           </div>
 
 
           <div class="container" style="padding-top:1em!important">
 
               <div class="row">
-                  <div class="col-md-4 filterDiv capacity">
+                  <div class="col-md-4 filterDiv capacity social late">
                       <div class="card mb-4 shadow-sm">
                           <img src="Images/learning_commons_banner.jpg" height="225" alt="learning_common" preserveAspectRatio="True">
                           <div class="card-body">
@@ -87,7 +89,7 @@
                       </div>
                   </div>
              
-                  <div class="col-md-4 filterDiv capacity">
+                  <div class="col-md-4 filterDiv capacity low distanced">
                       <div class="card mb-4 shadow-sm">
                           <img src="Images/ilc_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
@@ -104,7 +106,7 @@
                       </div>
                   </div>
             
-                  <div class="col-md-4 filterDiv capacity">
+                  <div class="col-md-4 filterDiv capacity distanced social">
                       <div class="card mb-4 shadow-sm">
                           <img src="Images/south_college_banner.jpg" height="225" alt="south_college" preserveAspectRatio="True">
                           <div class="card-body">
@@ -122,7 +124,7 @@
                       </div>
                   </div>
             
-                  <div class="col-md-4 filterDiv medium">
+                  <div class="col-md-4 filterDiv distanced low">
                       <div class="card mb-4 shadow-sm">
                           <img src="Images/isenberg_banner.png" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
@@ -138,7 +140,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-md-4 filterDiv medium">
+                  <div class="col-md-4 filterDiv distanced late low">
                       <div class="card mb-4 shadow-sm">
                           <img src="Images/umass_fl18_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
@@ -155,7 +157,7 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                      <div class="card mb-4 shadow-sm filterDiv capacity distance late">
                           <img src="Images/roots_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
                               <h3>Roots Cafe</h3>
@@ -172,7 +174,7 @@
                   </div>
 
                   <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                      <div class="card mb-4 shadow-sm filterDiv distanced low">
                           <img src="Images/lederle_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
                               <h3>Lederle Cafe</h3>
@@ -188,7 +190,7 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                      <div class="card mb-4 shadow-sm filterDiv late social">
                           <img src="Images/isb_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
                               <h3>ISB Cafe</h3>
@@ -204,7 +206,7 @@
                       </div>
                   </div>
                   <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm filterDiv sparse">
+                      <div class="card mb-4 shadow-sm filterDiv capacity late social">
                           <img src="Images/worcester_banner.jpg" height="225" alt="ilc" preserveAspectRatio="True">
                           <div class="card-body">
                               <h3>Worcester Dining Common</h3>
