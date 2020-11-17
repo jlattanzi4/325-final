@@ -26,9 +26,17 @@
             <input type="email" class="form-control" id="exampleFormControlInput1" style="width: 500px" placeholder="name@example.com">
         </div>
 
+        <!-- add counter-plus class -->
+        <!-- change the type of the button from submit to button -->
         <div class="form-group row">
             <div class="col-sm-10">
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary counter-plus" type="button" value="Submit">
+            </div>
+        </div>
+        <!-- add a cancel reservation option -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <input class="btn btn-primary counter-minus" type="button" value="Cancel Reservation">
             </div>
         </div>
     
@@ -39,7 +47,8 @@
                         <tr>
                             <th scope="col">Current Students</th>
                             <th scope="col">
-                                <input name="counter" id="countername">
+                                <!-- put display here -->
+                                <p id="counter-display"></p>
                             </th>
                         </tr>
                         <tr>
@@ -67,6 +76,8 @@
         </div>
 
     </form>
-
+    <!-- move client form to bottom -->
+    <!-- add another dot to go back a folder -->
+    <script src='../client.js'></script>
 </body>
 </html>

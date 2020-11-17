@@ -26,47 +26,59 @@
             <input type="email" class="form-control" id="exampleFormControlInput1" style="width: 500px" placeholder="name@example.com">
         </div>
 
+       <!-- add counter-plus class -->
+        <!-- change the type of the button from submit to button -->
         <div class="form-group row">
             <div class="col-sm-10">
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary counter-plus" type="button" value="Submit">
             </div>
         </div>
-    
+        <!-- add a cancel reservation option -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <input class="btn btn-primary counter-minus" type="button" value="Cancel Reservation">
+            </div>
+        </div>
+
         <div class="form-group row">
             <div class="col-sm-10">
                 <h5>Area Info</h5>
                     <table class="table-striped center" align="left">
+                        <!-- copied code from here up  -->
                         <tr>
                             <th scope="col">Current Students</th>
                             <th scope="col">
-                                <input name="counter" id="countername">
+                                <!-- put display here -->
+                                <p id="counter-display"></p>
                             </th>
                         </tr>
                         <tr>
                             <th scope="col">Max Students</th>
-                            <th scope="col">60</th>
+                            <th scope="col">15</th>
                         </tr>
                         <tr>
                             <th scope="col">Social Distancing Level</th>
-                            <th scope="col">Low</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Noise Level</th>
                             <th scope="col">High</th>
                         </tr>
                         <tr>
+                            <th scope="col">Noise Level</th>
+                            <th scope="col">Low</th>
+                        </tr>
+                        <tr>
                             <th scope="col">Hours</th>
-                            <th scope="col">7:00am-12:00am</th>
+                            <th scope="col">12:00am-12:00am</th>
                         </tr>
                         <tr>
                             <th scope="col">Group Size</th>
-                            <th scope="col">1 to 10</th>
+                            <th scope="col">1</th>
                         </tr>
                     </table>
             </div>
         </div>
-
+    </div>
     </form>
-
+    <!-- move client form to bottom -->
+    <!-- add another dot to go back a folder -->
+    <script src='../client.js'></script>
 </body>
 </html>
