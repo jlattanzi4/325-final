@@ -35,8 +35,9 @@ function counterRead() {
 function counterUpdate() {
     (async () => {
 	let counterName = document.getElementById("countername").value;
-	let userName = document.getElementById("username").value;
-	let counterValue = document.getElementById("countervalue").value;
+	let name = document.getElementById("name").value;
+	let email = document.getElementById("email").value;
+
 	const newURL = url + "/users/" + userName + "/update?name=" + counterName + "&value=" + counterValue;
 	console.log("counterUpdate: fetching " + newURL);
 	const resp = await fetch(newURL);
@@ -64,3 +65,25 @@ function counterDelete() {
 	}	    
     })();
 }
+
+let counterDisplayElem = document.querySelector('.counter-display');
+let counterMinusElem = document.querySelector('.counter-minus');
+let counterPlusElem = document.querySelector('.counter-plus');
+
+let count = 0;
+
+updateDisplay();
+
+counterPlusElem.addEventListener("click",()=>{
+    count++;
+    updateDisplay();
+}) ;
+
+counterMinusElem.addEventListener("click",()=>{
+    count--;
+    updateDisplay();
+});
+
+function updateDisplay(){
+    document.getElementById("counter-display").innerHTML = "count:" + count;
+};

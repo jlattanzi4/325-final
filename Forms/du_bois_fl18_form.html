@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <meta charset="utf-8" />
+    
 
     <title></title>
 </head>
@@ -19,22 +20,30 @@
         
         <div style="width:800px; margin:0 auto;">
         <div class="form-group">
-            <label for="exampleFormControlInput1">Name</label>
+            <label for="exampleFormControlInput1" id="name">Name</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" style="width: 500px" placeholder="Bosb Personson">
             
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlInput2">Email Address</label>
+            <label for="exampleFormControlInput2" id="email">Email Address</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" style="width: 500px" placeholder="name@example.com">
         </div>
 
+        <!-- add counter-plus class -->
+        <!-- change the type of the button from submit to button -->
         <div class="form-group row">
             <div class="col-sm-10">
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary counter-plus" type="button" value="Submit">
             </div>
         </div>
-    
+        <!-- add a cancel reservation option -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <input class="btn btn-primary counter-minus" type="button" value="Cancel Reservation">
+            </div>
+        </div>
+
         <div class="form-group row">
             <div class="col-sm-10">
                 <h5>Area Info</h5>
@@ -43,7 +52,8 @@
                         <tr>
                             <th scope="col">Current Students</th>
                             <th scope="col">
-                                <input name="counter" id="countername">
+                                <!-- put display here -->
+                                <p id="counter-display"></p>
                             </th>
                         </tr>
                         <tr>
@@ -71,6 +81,8 @@
         </div>
     </div>
     </form>
-
+    <!-- move client form to bottom -->
+    <!-- add another dot to go back a folder -->
+    <script src='../client.js'></script>
 </body>
 </html>
