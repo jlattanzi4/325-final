@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eaf0790-b529-4f53-b77a-8413338688db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.325-final.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.325-final.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forms/du_bois_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/du_bois_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/ilc_fl2_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/ilc_fl2_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/isb_cafe_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/isb_cafe_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/isenberg_rm32_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/isenberg_rm32_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/lederle_cafe_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/lederle_cafe_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/roots_cafe_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/roots_cafe_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/south_college_west_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/south_college_west_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/worcester_dining_common_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/worcester_dining_common_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +43,7 @@
         <option value="$PROJECT_DIR$/Forms/isenberg_rm32_form.html" />
         <option value="$PROJECT_DIR$/Forms/isb_cafe_form.html" />
         <option value="$PROJECT_DIR$/Forms/ilc_fl2_form.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Forms/du_bois_form.html" />
         <option value="$PROJECT_DIR$/client.js" />
       </list>
@@ -89,13 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1605649941266</updated>
       <workItem from="1605649947911" duration="3869000" />
+      <workItem from="1605823981036" duration="1970000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -107,8 +104,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1097" y="634" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605825710214">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1097" y="634" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605825710214" />
   </component>
 </project>

@@ -69,14 +69,21 @@ function counterDelete() {
 let counterDisplayElem = document.querySelector('.counter-display');
 let counterMinusElem = document.querySelector('.counter-minus');
 let counterPlusElem = document.querySelector('.counter-plus');
+let maxStudents  = document.getElementById('max-students').innerText;
 
 let count = 10;
 
 updateDisplay();
 
 counterPlusElem.addEventListener("click",()=>{
-    count++;
-    updateDisplay();
+	if(count < maxStudents){
+		count++;
+		updateDisplay();
+	} else {
+		count++;
+		updateDisplay();
+	}
+    
 }) ;
 
 counterMinusElem.addEventListener("click",()=>{
